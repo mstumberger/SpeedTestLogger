@@ -44,7 +44,7 @@ while 1:
 
     except Exception:
         now = datetime.now().timestamp()
-        timestamp = datetime.utcfromtimestamp(now).strftime('%Y-%m-%d %H:%M:%S')
+        timestamp = datetime.fromtimestamp(now).strftime('%Y-%m-%d %H:%M:%S')
         DATA[timestamp] = "No CONNECTION" 
         print("FAILED !!!!")
         with open(FILENAME, 'w') as outfile:
